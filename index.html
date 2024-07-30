@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+</head>
+<body>
+    
+</body>
+<!-- using JavaScript -->
+<script>
+let a = Math.random(5) * 2;
+a = Number.parseInt(a)
+let inp;
+let score = 100;
+
+while (inp != a) {
+  score = score - 1;
+  inp = prompt("Enter the Number : ");
+  if (inp == a) {
+    console.log("Congratulation! You guess the correct number.")
+    console.log(`You guess the actual number in ${100 - score} chances.`)
+  }
+  else if (inp > a && inp < 100) {
+    console.log("Your number is greater than the actual number.")
+  }
+  else if (inp < a && inp > 0) {
+    console.log("Your number is smaller than the actual number.")
+  }
+  else {
+    console.log("Enter number between 1 t 100")
+  }
+}
+</script>
+</html>
